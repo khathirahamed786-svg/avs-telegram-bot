@@ -1,8 +1,7 @@
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
-TOKEN = "8380321396:AAENKq3iXH0nAzudkEYhUw-CSQspF6SuxKE"
-
+TOKEN = "8380321396:AAHY5dmxoGkBpXQvNWWmBJs-VSMqwcQ6Das"
 # Menu buttons
 keyboard = [
     ["📅 Timetable", "👨‍🏫 Staff"],
@@ -113,5 +112,6 @@ app = ApplicationBuilder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(MessageHandler(filters.TEXT, reply))
+
 
 app.run_polling()
